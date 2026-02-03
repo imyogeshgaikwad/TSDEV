@@ -10,7 +10,7 @@ airlineSeat = "aisle"
 
 const orders = ["12" , " 20", "25", "56"]
 
-let currentorder;
+let currentorder :string | undefined;
 
 for(let order of orders)
 {
@@ -18,6 +18,7 @@ for(let order of orders)
         currentorder = order
         break
     }
+    currentorder = "111";
 }
 
 console.log(currentorder)
