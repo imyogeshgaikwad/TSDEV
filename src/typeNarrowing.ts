@@ -65,14 +65,17 @@ function serveThings(item:ServeOrder | string){
 
 type HotelVacant = {
   type: "hotel";
+  netPrice : number
 };
 
 type RestroVacant = {
   type: "restro";
+  amount: number
 };
 
 type LodgeVacant = {
   type: "lodge";
+  safty: number
 };
 
 
@@ -92,4 +95,11 @@ function MakeBook(order: Vacant) {
       const _exhaustiveCheck: never = order;
       return _exhaustiveCheck;
   }
+}
+
+function book(order: HotelVacant | RestroVacant) {
+    if ("netPrice" in order){
+
+    }
+    
 }
