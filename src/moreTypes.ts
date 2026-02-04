@@ -32,3 +32,35 @@ newVal = 2.5
 if(typeof newVal === "string"){
     newVal.toUpperCase();
 }
+
+
+try {
+    
+} catch (error) {
+    if(error instanceof Error){
+        console.log(error.message)
+    }  
+    console.log("Error", error)
+}
+
+const data:unknown = "developement phase started"
+const strData: string = data as string
+
+
+type Role = "admin" | "user" | "superadmin"
+
+function redirectBasedOnRole(role:Role):void{
+    if(role === "admin"){
+        console.log("Redirecting to admin dashboard")
+        return
+    }
+    if(role === "user"){
+         console.log("Redirecting to user dashboard")
+        return
+    }
+    role;
+}
+
+function neverReturn():never{
+    while(true){}
+}
